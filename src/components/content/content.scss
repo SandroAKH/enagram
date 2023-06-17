@@ -1,0 +1,227 @@
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .formats {
+        margin-top: 35px;
+        cursor: pointer;
+
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        height: 24px;
+
+        div {
+            height: 24px;
+
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(7),
+            &:nth-child(8) {
+                flex: 1;
+                position: relative;
+                cursor: pointer;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    right: 0;
+                    height: 18px;
+                    border-right: 1px solid #CCCACA;
+                    margin-right: -15px;
+
+                }
+            }
+
+            &:nth-child(4) {
+                margin-left: 10px;
+            }
+
+            &:nth-child(6) {
+                margin-left: 10px;
+            }
+
+            &:nth-child(8) {
+                margin-left: 10px;
+            }
+
+            &:nth-child(9) {
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+    .check-btn {
+        width: 106px;
+        height: 36px;
+        background: #2D62ED;
+        border-radius: 6px;
+        border: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        outline: none;
+        cursor: pointer;
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+
+    .action-btns {
+        display: flex;
+
+        button {
+            display: flex;
+            transition: 0.3s ease-in-out;
+            background: transparent;
+            padding: 4px 14px;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 28px;
+            text-align: center;
+            align-items: center;
+            margin: 0;
+            height: 36px;
+            gap: 8px;
+
+            &:nth-child(2) {
+                width: 97px;
+                color: #606060;
+
+                &::after {
+                    content: "";
+                    height: 18px;
+                    border-right: 2px solid #CCCACA;
+                    margin-left: 21px;
+                }
+            }
+
+            &:hover {
+                transition: 0.3s ease-in-out;
+                background: #EDEDED;
+                border-radius: 4px;
+            }
+
+            border: none;
+            outline: none;
+
+            img {
+
+                vertical-align: middle;
+            }
+        }
+
+        .copy {
+            width: 90px;
+            margin-right: 15px;
+            color: #2D62ED;
+
+        }
+    }
+
+    .logo {
+        gap: 148px;
+        display: flex;
+        align-items: center;
+        height: 36px;
+        margin-top: 33px;
+
+        img {
+            margin-right: 60px;
+            margin-top: 5px;
+        }
+    }
+
+    .content-header {
+        height: 114px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #EDEDED;
+        margin: 0 129px 0 1px;
+        padding: 64px 27px 0 117px
+    }
+
+    .content-input {
+        flex: 1;
+
+    }
+
+    textarea {
+        border: none;
+        width: calc(100% - 247px);
+        outline: none;
+        resize: none !important;
+        margin-left: 118px !important;
+        padding-top: 52px;
+        background: transparent;
+        height: 100%;
+        font-size: 12px !important;
+
+
+        &::placeholder {
+            padding-left: 4px;
+        }
+    }
+
+    .content-footer {
+        height: 136px;
+        margin: 0 0 0 117px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .chars {
+        background: #ffffff;
+        width: 192px;
+        height: 36px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        padding: 8px 20px;
+
+    }
+
+    .footer-border {
+        margin: 0 281px 0px 84px;
+        border: 1px solid #EDEDED;
+        opacity: 1;
+
+    }
+
+}
+
+
+
+.tooltip {
+    position: fixed !important;
+    inset: 5px auto auto 0px !important;
+
+    span {
+        font-weight: 400;
+    }
+}
+
+
+.tooltip-inner {
+    background-color: #001849 !important;
+    border-radius: 4px !important;
+    height: 32px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF !important;
+}

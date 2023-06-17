@@ -1,0 +1,78 @@
+.language-wrapper {
+
+    .dropdown {
+        margin-left: 32px;
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        width: 46px;
+        text-align: center;
+
+
+    }
+
+    .lanLogo {
+        gap: 8px;
+        display: flex;
+        color: #606060;
+        align-items: center;
+        font-size: 12px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+
+    .dropdown-menu {
+        --bs-dropdown-min-width: 144px;
+    }
+
+    .dropdown-menu.show {
+        width: 144px;
+        height: 36px;
+        margin-top: -4px;
+        border-radius: 3px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 4px 14px;
+    }
+
+
+    .dropdown-toggle {
+
+        cursor: pointer;
+        width: 144px;
+        height: 36px;
+        outline: none;
+        height: 37px;
+        background-color: transparent !important;
+
+        border: none;
+        border-radius: 3px;
+
+        &:hover {
+            transition: 0.3s ease-in-out;
+            background-color: #EDEDED !important;
+            border-radius: 4px;
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown-item {
+        padding: 0;
+        padding-top: 4px;
+        background-color: transparent !important;
+
+        &:hover {
+            opacity: 1;
+            transition: 0.3s;
+        }
+    }
+}

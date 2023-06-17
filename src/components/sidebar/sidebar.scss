@@ -1,0 +1,118 @@
+.sidebar {
+    width: 177px;
+    background: #2D62ED;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0px 57px 13px;
+
+    div {
+        hr {
+            opacity: 1;
+            border: 2px solid #9EB9FF;
+            border-radius: 5px;
+            width: 141px;
+        }
+
+        &:nth-child(1) {
+            margin-top: 125px;
+        }
+
+        ul {
+            &:nth-child(2) {
+                margin: 35px 0 40px 0;
+            }
+
+            li {
+                position: relative;
+                width: 100%;
+                position: relative;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 38px;
+                height: 38px;
+                cursor: pointer;
+                color: #FFFFFF;
+                padding-left: 10px;
+
+                img,
+                svg {
+                    margin-right: 13px;
+                    vertical-align: middle;
+                }
+
+                svg path {
+                    fill: #FFFFFF;
+                }
+
+            }
+
+            .active {
+                position: relative;
+                background: white;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                color: #2D62ED;
+                width: 166px;
+
+                path {
+                    fill: #2D62ED;
+                }
+
+            }
+
+            .active::before {
+                content: "";
+                position: absolute;
+                background-color: transparent;
+                bottom: 37px;
+                height: 50px;
+                width: 25px;
+                border-top-left-radius: 50px;
+                right: 0;
+                transform: rotate(180deg);
+                box-shadow: 0px -20px 0 0 #ffffff;
+
+            }
+
+            .active::after {
+                content: "";
+                position: absolute;
+                background-color: transparent;
+                bottom: -50px;
+                height: 50px;
+                width: 25px;
+                border-top-right-radius: 50px;
+                right: 0;
+                box-shadow: 0px -20px 0 0 #ffffff;
+
+            }
+        }
+    }
+
+    .sidebar-icons {
+        border: 0.702703px solid #DBE9FD;
+        width: 53.41px;
+        height: 26px;
+        margin: 0 auto;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 52px;
+        padding-left: 4px;
+        padding-right: 3px;
+
+        img {
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    }
+
+    .sidebar-settings {
+        padding-right: 13px;
+    }
+}
