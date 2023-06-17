@@ -121,6 +121,8 @@ class MyClass {
                 const data = await response.json();
                 const sourceUrl = data.AudioFilePath;
                 audioUrls.push(sourceUrl);
+
+                this.onresult({ sourceUrl }); // to showcase sources after every request
             } else {
                 console.error('Server request error:', response.status);
             }
@@ -161,9 +163,10 @@ class MyClass {
 
             }
 
-            if (this.onresult) {
-                this.onresult({ audioUrls });
-            }
+            // if (this.onresult) {
+            //     this.onresult({ audioUrls });
+            // }
+
         } catch (error) {
             console.error('Token retrieval error:', error.message);
         }
@@ -172,9 +175,9 @@ class MyClass {
 
 // Example usage
 const cl = new MyClass();
-cl.text = 'With the break of dawn, the sun emerges, casting a luminous glow upon the earth. Nature awakens, showcasing an array of vivid blooms that add a splash of color to the world. Joyful laughter resonates, spreading contagious mirth through the air. Majestic mountains reach for the heavens, their peaks adorned with wisps of clouds. Serene rivers flow gracefully, carrying tales of ancient lore in their gentle currents. ';
+cl.text = 'The wind whispers enchanting melodies, rustling leaves in harmonious rhythm. Imagination takes flight, soaring high on the wings of creativity, exploring uncharted realms of possibility. Time dances gracefully, weaving together the threads of precious moments. Embrace the unfolding adventure, for every step holds the promise of new discoveries. Follow the guidance of your heart, and let your spirit radiate with boundless light.';
 cl.onresult = function (result) {
-    const audioUrls = result.audioUrls;
-    console.log('Audio URLs:', audioUrls);
-};
+    var MyResult = result.sourceUrl;
+    console.log(MyResult)
+}
 cl.start();
